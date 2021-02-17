@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<c:choose>
+<c:when test="${accion eq 'crear'}">
+<title>Creación de cliente</title>
+</c:when>
+<c:otherwise>
+<title>Modificación de cliente</title>
+</c:otherwise>
+</c:choose>
+<link rel="stylesheet" href="resources/css/estilos.css" />
+</head>
+<body>
+<h2>Creación de cliente</h2>
+<form action="crear">
+	<input type="hidden" name="id"/>
+	<div>
+		<div class="label">
+			<label for="nombre">Nombre: </label>
+		</div>
+		<div class="field">
+			<input type="text" name="nombre"/>
+		</div>
+	</div>
+	<div>
+		<div class="label">
+			<label for="apellido">Apellidos: </label>
+		</div>
+		<div class="field">
+			<input type="text" name="apellido"/>
+		</div>
+	</div>
+	<div>
+		<div class="label">
+			<label for="email">E-mail: </label>
+		</div>
+		<div class="field">
+			<input type="text" name="email"/>
+		</div>
+	</div>
+	<div>
+		<div class="boton">
+			<a href="javascript:document.forms[0].submit();">crear</a>
+		</div>
+		<div class="boton">
+			<a href="lista">Cancelar</a>
+		</div>
+	</div>
+</form>
+</body>
+</html>
